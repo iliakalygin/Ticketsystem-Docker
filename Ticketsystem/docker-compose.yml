@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  container1_html:
+    image: nginx:latest
+    volumes:
+      - ./container1_html/index.html:/usr/share/nginx/html/index.html
+      - ./container1_html/style.css:/usr/share/nginx/html/style.css
+    ports:
+      - "80:80"
+  
+  container2_nodejs:
+    build: ./container2_nodejs
+    ports:
+      - "3000:3000"
+    depends_on:
+      - container3_sql
+
+  container3_sql:
+    build: ./container3_sql
+    environment:
+      MYSQL_ROOT_PASSWORD: password # Ersetzen Sie dies durch Ihr gewähltes Passwort
+    ports:
+      - "3306:3306"
