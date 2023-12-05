@@ -107,9 +107,14 @@
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => console.error('Error:', error));
-    });
 
-    this.reset()
+    document.getElementById('email').value = '';
+    document.getElementById('name').value = '';
+    document.getElementById('tel').value = '';
+    document.getElementById('helpTopic').value = 'Anderes Problem Melden'; // Reset to default or leave blank
+    document.getElementById('summary').value = '';
+    document.getElementById('description').value = '';
+    });
     </script>
 
 
