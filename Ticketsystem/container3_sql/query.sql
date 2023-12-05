@@ -12,3 +12,5 @@ CREATE TABLE IF NOT EXISTS tickets (
 
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY 'password';
 FLUSH PRIVILEGES;
+
+

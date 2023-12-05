@@ -18,6 +18,6 @@ services:
   container3_sql:
     build: ./container3_sql
     environment:
-      MYSQL_ROOT_PASSWORD: password # Ersetzen Sie dies durch Ihr gewähltes Passwort
+      MYSQL_ROOT_PASSWORD: password
     ports:
       - "3306:3306"

@@ -19,8 +19,6 @@ const pool = mysql.createPool({
 app.post('/ticket', (req, res) => {
   const { email, name, tel, helpTopic, summary, description } = req.body;
 
-  // Hier sollten Sie eine Datenvalidierung hinzufügen
-
   const query = 'INSERT INTO tickets (email, name, tel, helpTopic, summary, description) VALUES (?, ?, ?, ?, ?, ?)';
   
   pool.getConnection((err, connection) => {
@@ -31,8 +29,7 @@ app.post('/ticket', (req, res) => {
     }
     
     connection.query(query, [email, name, tel, helpTopic, summary, description], (error, results) => {
-      connection.release(); // Verbindung zurück in den Pool geben
-
+      connection.release();
       if (error) {
         return res.status(500).json({ error: error.message });
       }
