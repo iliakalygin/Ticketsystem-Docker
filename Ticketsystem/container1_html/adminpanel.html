@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Form</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-container">
+        <div class="container mt-5">
+            <div class="header-container">
+                <h1>Admin Panel</h1>
+            </div>
+        </div>
+    </div>
+
+
+    §   
+<footer class="text-black text-center p-3">        
+    <p class="footer_text">©2023 Oberdorf IT</p>
+</footer>
+</div>
+
+<script>
+    
+    // fetch zum abrufen der daten aus DB
+
+</script>
+    
+
+
+<!-- Add Bootstrap JS and jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+<style>
+    
+/* Stil für den Container der Überschrift und des Schalters */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Stil für die Beschriftung des Dark Mode Schalters */
+.dark-mode-label {
+    margin-right: 10px; /* Abstand zwischen Beschriftung und Schalter */
+    font-size: 1rem; /* Schriftgröße der Beschriftung */
+}
+
+
+/* Um sicherzustellen, dass der HTML- und BODY-Tag 100% der Bildschirmhöhe einnehmen */
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+}
+
+/* Container für den gesamten Inhalt inklusive Footer */
+.main-container {
+    min-height: 100%; /* Minimale Höhe ist die volle Bildschirmhöhe */
+    position: relative; /* Ermöglicht absolute Positionierung innerhalb */
+    padding-bottom: 60px; /* Platz für den Footer, passen Sie dies entsprechend der Footer-Höhe an */
+}
+
+/* Footer selbst */
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0; /* Adjust padding as needed */
+    background-color: #f8f9fa; /* Or any other color you prefer */
+    color: #3B4252;
+}
+
+
+
+
+
+/* Dark Mode (Nord Polar Night) */
+body.dark-mode {
+    background-color: #2E3440; /* Polar Night */
+    color: #ECEFF4; /* Snow Storm */
+}
+
+/* Input, Textarea, Dropdown-Stile für den Dark-Mode */
+body.dark-mode input, body.dark-mode textarea, body.dark-mode select {
+    background-color: #3B4252; /* Polar Night */
+    color: #ECEFF4; /* Snow Storm */
+    border: 1px solid #4C566A; /* Polar Night */
+}
+
+body.dark-mode input::placeholder, body.dark-mode textarea::placeholder {
+    color: #D8DEE9; /* Snow Storm */
+}
+
+body.dark-mode button {
+    background-color: #4C566A; /* Polar Night */
+    color: #ECEFF4; /* Snow Storm */
+    border: 1px solid #D8DEE9; /* Snow Storm */
+}
+
+body.dark-mode button:hover {
+    background-color: #3B4252; /* Deeper Polar Night */
+}
+
+
+/* Light Mode für den Footer */
+footer {
+    background-color: #f8f9fa; /* Nord snowStorm */
+    color: #3B4252; /* Polar Night */
+}
+
+
+/* Dark Mode für den Footer */
+body.dark-mode footer {
+    background-color: #3b4252; /* Polar Night - slightly lighter shade */
+    color: #ECEFF4; /* Snow Storm */
+}
+
+body.dark-mode input[type="text"], body.dark-mode input[type="email"], body.dark-mode input[type="tel"] {
+    background-color: #3B4252 !important; 
+    color: #ECEFF4 !important;
+    border: 1px solid #4C566A !important;
+}
+
+body.dark-mode input[type="text"]::placeholder, body.dark-mode input[type="email"]::placeholder, body.dark-mode input[type="tel"]::placeholder {
+    color: #D8DEE9 !important;
+}
+
+
+body.dark-mode select {
+    background-color: #3B4252 !important; 
+    color: #ECEFF4 !important;
+    border: 1px solid #4C566A !important;
+}
+
+body.dark-mode select option {
+    background-color: #3B4252 !important; 
+    color: #ECEFF4 !important;
+}
+
+body.dark-mode textarea {
+    background-color: #3B4252 !important;
+    color: #ECEFF4 !important;
+    border: 1px solid #4C566A !important;
+}
+
+
+
+
+/* Dark Mode Schalter-Stil */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px; /* 60px original width reduced by 33% */
+    height: 22.78px; /* 34px original height reduced by 33% */
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 22.78px; /* Added to maintain rounded corners proportionate to the new size */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17.38px; /* 26px original height reduced by 33% */
+    width: 17.38px; /* 26px original width reduced by 33% */
+    left: 3px; /* Adjusted for smaller size */
+    bottom: 2.69px; /* Adjusted for smaller size */
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; /* Maintains the circular shape */
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(17.38px); /* Adjusted to new slider width */
+}
+
+/* Rounded slider */
+.slider.round {
+    border-radius: 22.78px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+</style>
+
+
+
+
+</body>
+</html>
