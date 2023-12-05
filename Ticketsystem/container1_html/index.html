@@ -4,8 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket Form</title>
-    <!-- Add Bootstrap CSS -->
+    <!-- Bootstrap CSS und jQuery -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -64,7 +68,7 @@
             <input type="text" class="form-control" id="summary"  name="summary" required>
         </div>
 
-        <!-- Text Editor Bereich (Sie können hier einen einfachen Texteditor oder einen wie TinyMCE oder CKEditor verwenden) -->
+        <!-- Text Editor Bereich -->
         <div class="form-group">
             <label for="description">Beschreibung</label>
             <textarea class="form-control" id="description" name="description" rows="5"></textarea>
@@ -79,7 +83,6 @@
 </div>
 
 <footer class="text-black text-center p-3">
-    <a class="footer_text" href="./adminpanel.html">Admin Panel</a>
     <p class="footer_text">©2023 Oberdorf IT</p>
 </footer>
 </div>
@@ -134,14 +137,6 @@
 </script>
     
 
-
-<!-- Add Bootstrap JS and jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-
 <style>
     
 /* Stil für den Container der Überschrift und des Schalters */
@@ -153,22 +148,22 @@
 
 /* Stil für die Beschriftung des Dark Mode Schalters */
 .dark-mode-label {
-    margin-right: 10px; /* Abstand zwischen Beschriftung und Schalter */
-    font-size: 1rem; /* Schriftgröße der Beschriftung */
+    margin-right: 10px; 
+    font-size: 1rem;
 }
 
 
 /* Um sicherzustellen, dass der HTML- und BODY-Tag 100% der Bildschirmhöhe einnehmen */
 html, body {
     height: 100%;
-    margin: 0; /* Remove default margin */
+    margin: 0;
 }
 
 /* Container für den gesamten Inhalt inklusive Footer */
 .main-container {
-    min-height: 100%; /* Minimale Höhe ist die volle Bildschirmhöhe */
-    position: relative; /* Ermöglicht absolute Positionierung innerhalb */
-    padding-bottom: 60px; /* Platz für den Footer, passen Sie dies entsprechend der Footer-Höhe an */
+    min-height: 100%; 
+    position: relative; 
+    padding-bottom: 60px; 
 }
 
 /* Footer selbst */
@@ -177,8 +172,8 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 10px 0; /* Adjust padding as needed */
-    background-color: #f8f9fa; /* Or any other color you prefer */
+    padding: 10px 0;
+    background-color: #f8f9fa;
     color: #3B4252;
 }
 
@@ -188,43 +183,43 @@ footer {
 
 /* Dark Mode (Nord Polar Night) */
 body.dark-mode {
-    background-color: #2E3440; /* Polar Night */
-    color: #ECEFF4; /* Snow Storm */
+    background-color: #2E3440;
+    color: #ECEFF4;
 }
 
 /* Input, Textarea, Dropdown-Stile für den Dark-Mode */
 body.dark-mode input, body.dark-mode textarea, body.dark-mode select {
-    background-color: #3B4252; /* Polar Night */
-    color: #ECEFF4; /* Snow Storm */
-    border: 1px solid #4C566A; /* Polar Night */
+    background-color: #3B4252;
+    color: #ECEFF4;
+    border: 1px solid #4C566A;
 }
 
 body.dark-mode input::placeholder, body.dark-mode textarea::placeholder {
-    color: #D8DEE9; /* Snow Storm */
+    color: #D8DEE9;
 }
 
 body.dark-mode button {
-    background-color: #4C566A; /* Polar Night */
-    color: #ECEFF4; /* Snow Storm */
-    border: 1px solid #D8DEE9; /* Snow Storm */
+    background-color: #4C566A;
+    color: #ECEFF4;
+    border: 1px solid #D8DEE9;
 }
 
 body.dark-mode button:hover {
-    background-color: #3B4252; /* Deeper Polar Night */
+    background-color: #3B4252; 
 }
 
 
 /* Light Mode für den Footer */
 footer {
-    background-color: #f8f9fa; /* Nord snowStorm */
-    color: #3B4252; /* Polar Night */
+    background-color: #f8f9fa;
+    color: #3B4252; 
 }
 
 
 /* Dark Mode für den Footer */
 body.dark-mode footer {
-    background-color: #3b4252; /* Polar Night - slightly lighter shade */
-    color: #ECEFF4; /* Snow Storm */
+    background-color: #3b4252;
+    color: #ECEFF4;
 }
 
 body.dark-mode input[type="text"], body.dark-mode input[type="email"], body.dark-mode input[type="tel"] {
@@ -262,8 +257,8 @@ body.dark-mode textarea {
 .switch {
     position: relative;
     display: inline-block;
-    width: 40px; /* 60px original width reduced by 33% */
-    height: 22.78px; /* 34px original height reduced by 33% */
+    width: 40px;
+    height: 22.78px;
 }
 
 .switch input { 
@@ -281,19 +276,19 @@ body.dark-mode textarea {
     bottom: 0;
     background-color: #ccc;
     transition: .4s;
-    border-radius: 22.78px; /* Added to maintain rounded corners proportionate to the new size */
+    border-radius: 22.78px;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 17.38px; /* 26px original height reduced by 33% */
-    width: 17.38px; /* 26px original width reduced by 33% */
-    left: 3px; /* Adjusted for smaller size */
-    bottom: 2.69px; /* Adjusted for smaller size */
+    height: 17.38px;
+    width: 17.38px;
+    left: 3px;
+    bottom: 2.69px;
     background-color: white;
     transition: .4s;
-    border-radius: 50%; /* Maintains the circular shape */
+    border-radius: 50%;
 }
 
 input:checked + .slider {
@@ -301,10 +296,9 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-    transform: translateX(17.38px); /* Adjusted to new slider width */
+    transform: translateX(17.38px);
 }
 
-/* Rounded slider */
 .slider.round {
     border-radius: 22.78px;
 }
@@ -312,11 +306,7 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
 </style>
-
-
-
 
 </body>
 </html>

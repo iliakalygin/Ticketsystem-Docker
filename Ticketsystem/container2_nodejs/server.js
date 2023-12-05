@@ -38,6 +38,29 @@ app.post('/ticket', (req, res) => {
   });
 });
 
+
+app.get('/tickets', (req, res) => {
+  // Hier holen wir alle Tickets aus der Datenbank
+  const query = 'SELECT * FROM tickets';
+
+  pool.getConnection((err, connection) => {
+    if (err) {
+      console.error('Fehler beim Verbinden mit der Datenbank: ', err);
+      res.status(500).send('Datenbankverbindungsfehler');
+      return;
+    }
+
+    connection.query(query, (error, results) => {
+      connection.release();
+      if (error) {
+        return res.status(500).json({ error: error.message });
+      }
+      res.json(results);
+    });
+  });
+});
+
+
 app.listen(port, () => {
   console.log(`Server läuft auf Port ${port}`);
 });
