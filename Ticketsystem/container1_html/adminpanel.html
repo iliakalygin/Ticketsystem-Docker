@@ -12,16 +12,25 @@
         <div class="container mt-5">
             <div class="header-container">
                 <h1>Admin Panel</h1>
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span class="dark-mode-label">Dark Mode</span>
+                </div>
             </div>
+        </div>
+
+        <footer class="text-black text-center p-3">        
+            <p class="footer_text">©2023 Oberdorf IT</p>
+            
+        </footer>
         </div>
     </div>
 
 
-    §   
-<footer class="text-black text-center p-3">        
-    <p class="footer_text">©2023 Oberdorf IT</p>
-</footer>
-</div>
+
 
 <script>
     
@@ -29,7 +38,18 @@
 
 </script>
     
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    
+    if(darkModeToggle) {
+        darkModeToggle.addEventListener("change", function() {
+            document.body.classList.toggle("dark-mode");
+        });
+    }
+});
 
+</script>
 
 <!-- Add Bootstrap JS and jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
