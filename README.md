@@ -25,5 +25,11 @@
    docker-compose up --build
    ```
 3. Unter den folgenden Ports werden nun das Front- und Datanbank gestartet:
-   Frontend (Webseite):
-   Datanbank (SQL): 
+   Frontend (Webseite): ```http://localhost:80```
+   Datanbank (SQL): http://localhost:3000
+4. Die Website kann mit dieser URL gestartet werden:
+   ```
+   http://localhost:80
+   ```
+
+## Daten aus der Datenbank auslesen.
