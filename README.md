@@ -26,7 +26,7 @@
    ```
 3. Unter den folgenden Ports werden nun das Front- und Datanbank gestartet:
    Frontend (Webseite): ```http://localhost:80```
-   Datanbank (SQL): http://localhost:3000
+   Datanbank (SQL): ```http://localhost:3000```
 4. Die Website kann mit dieser URL gestartet werden:
    ```
    http://localhost:80
