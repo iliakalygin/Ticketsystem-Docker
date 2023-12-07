@@ -30,7 +30,7 @@
  
    Datanbank (SQL): ```http://localhost:3000```
     
-5. Die Website kann mit dieser URL gestartet werden:
+5. Die Website kann unter dem Port 80 gestartet werden:
    ```
    http://localhost:80
    ```
