@@ -37,7 +37,7 @@
 
 ## Daten aus der Datenbank auslesen.
 
-Um die Daten jetzt aus der Datenbank auslesen zu können, sind folgende befehle im Terminal auszuführen:
+Um die Daten jetzt aus der Datenbank auslesen zu können, sind folgende befehle in einem neuen Terminal auszuführen:
 
 1. Um alle laufenden Docker Prozesse anzuzeigen:
    ```
@@ -46,7 +46,7 @@ Um die Daten jetzt aus der Datenbank auslesen zu können, sind folgende befehle 
 3. Kopieren Sie die ID vom Container 3 SQL
 4. Starten Sie SQL mit der kepierten ID:
    ```
-   docker exec -it {KOPIERE-SQL-ID} mysql -u root -p
+   docker exec -it KOPIERTE_SQL_ID mysql -u root -p
    ```
 5. Das Passowrd für die Datenbank lautet:
    ```
