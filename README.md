@@ -1,4 +1,4 @@
-# Einfaches Ticketsystem mit Docker
+# Einfaches Ticketsystem mit Docker (Windows)
 
 
 ## Systemvoraussetzungen
