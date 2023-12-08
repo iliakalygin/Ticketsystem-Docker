@@ -12,11 +12,11 @@
    ```
    git clone https://github.com/iliakalygin/Ticketsystem-Docker
    ```
-3. Wechslen Sie in den Ticketsystem Ordner mit dem Befehl, das kann auch über den File explorer getan werden.
+3. Wechslen Sie in den Ticketsystem Ordner mit dem Befehl
    ```
-   cd Ticketsystem
+   cd Tickersystem-Docker\Ticketsystem
    ```
-   um die weiteren Befehle ausführen zu können.
+  Dies kann auch über die Grafische oberfläche des File Explorers getan werden.
 
 ## Container Starten
 
