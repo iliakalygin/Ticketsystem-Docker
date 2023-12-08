@@ -3,6 +3,7 @@
 
 ## Systemvoraussetzungen
 
+- Windows 10/11
 - Docker Desktop
 
 
